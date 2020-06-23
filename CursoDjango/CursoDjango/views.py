@@ -1,8 +1,23 @@
 from django.http import HttpResponse
 import datetime
+from django.template import Template, Context
+
+
+class Persona(object):
+    def __init__(self,nombre,apellido):
+        self.nombre=nombre
+        self.apellido=apellido
 
 def primeraVista(request):
-    return HttpResponse("Estoy en la primer vista" )
+    P1=Persona("Bogar","Luna")
+    doc_externo = open("/Users/bogarluna/GitHub/Django/CursoDjango/CursoDjango/plantillas/plantilla1.html")
+    plt=Template(doc_externo.read())
+    doc_externo.close()
+    fecha=datetime.datetime.now()
+    ejemplo="Esto es parte del ejemplo de variables"
+    ctx=Context({"nombre":P1.nombre,"apellido":P1.apellido,"ejemplo1":ejemplo,"fecha":fecha})
+    documento=plt.render(ctx)
+    return HttpResponse(documento)
 
 def segundaVista(request): 
     return HttpResponse("Estoy en la segunda vista" )
