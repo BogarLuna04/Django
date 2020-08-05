@@ -9,7 +9,7 @@ class Persona(object):
         self.apellido=apellido
 
 def primeraVista(request):
-    P1=Persona("Bogar","Luna")
+    P1=Persona("Alejandro","Flores")
     doc_externo = open("/Users/bogarluna/GitHub/Django/CursoDjango/CursoDjango/plantillas/plantilla1.html")
     plt=Template(doc_externo.read())
     doc_externo.close()
