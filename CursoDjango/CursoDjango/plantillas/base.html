@@ -1,0 +1,31 @@
+<style>
+    #titulo{
+        background-color: green;
+        color: white;
+        text-align: center;
+    }
+    #footer{
+        background-color: green;
+        color: white;
+        text-align: center;
+    }
+</style>
+
+<html>
+    <head>
+        <title>
+            {% block title %} {% endblock%}
+        </title>
+    </head>
+    <body>
+        <h1 id="titulo" >Nutri Science</h1>
+        {%include "superior/barNav.html"%}
+        <h3> Super</h3>
+        {% block content %} 
+        {%  endblock    %}
+    </body>
+
+    <footer id="footer">
+        <p>Consejos y consultas de nutrición</p>
+    </footer>
+</html>

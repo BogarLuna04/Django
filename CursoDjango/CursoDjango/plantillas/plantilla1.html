@@ -1,13 +1,35 @@
 <html> 
     <body>
+        {%include "superior/barNav.html"%}
+        {#Esto es un comentario#}
+        {%comment%}
+        Esto es un comentario
+        de varias lineas
+        {%endcomment%}
         <h1 style="color:blue">
         Estamos en la primera platilla 
         </h1>
         <h2>
-        Bienvenido {{nombre}} {{apellido}}
+        {% if nombre == 'Bogar' %}
+            Estoy dentro de mi curso
+        {%else%}
+            Estoy en otro curso
+        {%endif%}
         </h2>
+        <p> Bienvenido {{nombre.upper}} {{apellido}}</p>
         <h3>{{ejemplo1}}</h3>
         <h3>Estamos a: {{fecha}} y esa es una variable dinamica</h3>
-
+        <h2><strong>Temas Curso:</strong></h2>
+        <p>
+            <ul>
+            {% if temas%}
+                {% for tema in temas %}
+                    <li>{{tema|first|lower}}</li> {#filtros con |#}
+                {% endfor %}
+            {%else%}
+            <p>No existen elementos</p>
+            {% endif %}
+            </ul>
+        </p>
     </body>
 </html>

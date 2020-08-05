@@ -10,3 +10,6 @@ $ python3 manage.py runserver
 Crear tablas en la base de datos
 
 $ python3 manage.py migrate
+
+
+para configurar desde donde cargar los templates (plantillas) se hace desde settings

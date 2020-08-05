@@ -54,7 +54,7 @@ ROOT_URLCONF = 'CursoDjango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/Users/bogarluna/GitHub/Django/CursoDjango/CursoDjango/plantillas'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
