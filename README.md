@@ -66,9 +66,20 @@ $ Articulos.objects.filter(precio__range=(5,70)).order_by('precio')
 Order by   desc
 $ Articulos.objects.filter(precio__range=(5,70)).order_by('-precio')
 
-
 Ver las operaciones realizadas de python a SQL
 $ lista.query.__str__() 
+
+
+
+
+CREAR Panel de administración
+$ python3 manage.py createsuperuser
+bogarluna
+
+
+
+
+
 
 Constraseña Postgres 25Dediciembre
 
