@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'articulosclientes',
         'USER':'postgres',
-        'PASSWORD':'25Dediciembre',
+        'PASSWORD':'contraseña',
         'HOST':'127.0.0.1',
         'DATABASE_PORT':'5432',
 
@@ -125,3 +125,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+ #Deben habilitarse permisos dentro del coreo gmail para enviar correos de terceros
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST='smtp@gmail.com'
+EMAIL_USE_TLS=True
+EMAIL_PORT=587
+EMAIL_HOST_USER='correo@gmail.com'
+EMAIL_HOST_PASSWORD ='contraseña'
